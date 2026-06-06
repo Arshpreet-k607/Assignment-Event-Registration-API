@@ -90,7 +90,7 @@ export const createEventSchema = Joi.object({
       "boolean.base": "isPublic must be a boolean",
     }),
 })
-  // Example cross-field rule: endDate must be after startDate
+  
   .custom((value, helpers) => {
     const start = new Date(value.startDate);
     const end = new Date(value.endDate);
