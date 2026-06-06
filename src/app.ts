@@ -1,5 +1,6 @@
 import express from "express";
 import eventsRouter from "./api/v1/routes/events.routes";
+import healthRouter from "./api/v1/routes/health.routes";
 
 const app = express();
 
@@ -15,7 +16,9 @@ app.use((req, res, next) => {
   next();
 });
 app.use(express.json());
-
+// Mounted routes
 app.use("/api/v1/events", eventsRouter);
+// Health route mounted near top-level middleware
+app.use("/api/v1/health", healthRouter);
 
 export default app;
