@@ -1,5 +1,17 @@
 # Event Registration API
 
+Simple Express + TypeScript API for managing events. Endpoints are mounted under `/api/v1/events`.
+
+Quick start
+
+```bash
+npm install
+npx tsx src/server.ts
+```
+
+Health endpoint: `GET /api/v1/health`
+# Event Registration API
+
 This is a simple backend API built with Node.js, Express, TypeScript, Joi, and Firebase Firestore.  
 It lets you create, read, update, and delete events. All event data is stored in Firestore, and all requests are validated using Joi.
 
